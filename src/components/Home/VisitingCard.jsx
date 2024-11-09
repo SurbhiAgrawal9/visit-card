@@ -4,6 +4,7 @@ import { Spin, Modal, Button, Input } from 'antd';
 import html2pdf from 'html2pdf.js';
 import useId from '../../hooks/useId';
 import { notify } from '../../utils/Notify';
+import imagesA from '../Arjun.pdf'
 
 const VisitingCard = () => {
     const [loading, setLoading] = useState(false);
@@ -139,9 +140,10 @@ const VisitingCard = () => {
                     <button onClick={handleShare} className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600">
                         <FaShareAlt className="inline mr-2" /> Share
                     </button>
-                    <button onClick={handleDownloadPDF} className="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">
+                    <a href={imagesA} target='_blank' >Download</a>
+                    {/* <button onClick="./Arjun.pdf" className="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">
                         {loading ? <Spin /> : 'Download'}
-                    </button>
+                    </button> */}
                 </div>
 
                 {/* Share Modal */}
